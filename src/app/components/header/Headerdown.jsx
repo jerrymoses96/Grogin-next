@@ -17,7 +17,8 @@ const Headerdown = () => {
   ];
 
   return (
-    <div className="wrapper py-3 flex justify-between">
+    <div className="wrapper py-3 flex justify-between border-b border-[#E5E7EB
+    ]">
       <div className="flex items-center gap-4">
         {menuItems.map((item) => (
           <div key={item.name} className="flex font-medium items-center gap-1">
