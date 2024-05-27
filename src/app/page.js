@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Footer from "./components/footer/Footer";
+import MainPage from "./components/mainHome/MainPage";
 
 export const metadata = {
   title: "Grogin Next",
@@ -6,10 +8,7 @@ export const metadata = {
 };
 
 export default function Home() {
-
-  return (
-   <div className="wrapper">
-    home
-   </div>
-  );
+  return <div className="wrapper">
+    <MainPage/>
+  </div>;
 }
