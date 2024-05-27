@@ -19,6 +19,20 @@ module.exports = {
       xs: "320px", // Regular min-width for xs breakpoint (included for completeness)
     },
     extend: {
+      appearance: {
+        none: "none",
+      },
+      colors: {
+        "red-500": "#ef4444",
+        "blue-500": "#3b82f6",
+        "green-500": "#10b981",
+        "yellow-500": "#f59e0b",
+        "purple-500": "#8b5cf6",
+        "orange-500": "#f97316",
+        "pink-500": "#ec4899",
+        "brown-500": "#a52a2a",
+        "gray-500": "#6b7280",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -26,5 +40,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

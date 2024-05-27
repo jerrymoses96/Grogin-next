@@ -7,7 +7,7 @@ const MainPage = () => {
   return (
     <div className="">
       <TopHome />
-      <div className="flex mt-8">
+      <div className="flex mt-8 gap-10">
         <FilterSection />
         <ProductSection />
       </div>
