@@ -31,7 +31,7 @@ const Login = () => {
             <input
               type="password"
               name="password"
-              placeholder="Enter your email"
+              placeholder="Enter your password"
               className="border border-[#000000
             ]  p-3 mt-3 rounded-lg drop-shadow-md"
             />
