@@ -2,6 +2,7 @@ import React from "react";
 import FiltersAdded from "./FiltersAdded";
 import ProductBanner from "./ProductBanner";
 import SortSection from "./SortSection";
+import ProductsDisplay from "./ProductsDisplay";
 
 const ProductSection = () => {
   return (
@@ -9,6 +10,7 @@ const ProductSection = () => {
       <FiltersAdded />
       <ProductBanner />
       <SortSection/>
+      <ProductsDisplay/>
     </div>
   );
 };
