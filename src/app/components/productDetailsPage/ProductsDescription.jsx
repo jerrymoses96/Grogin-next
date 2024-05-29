@@ -2,6 +2,7 @@ import Image from "next/image";
 import ProductImage from "./ProductImage";
 import ProductsText from "./ProductsText";
 import ProductTab from "./ProductTab";
+import ProductRelated from "./ProductRelated";
 
 const ProductsDescription = ({ product }) => {
   return (
@@ -14,6 +15,7 @@ const ProductsDescription = ({ product }) => {
       </div>
       <div>
         <ProductTab product={product} />
+        <ProductRelated product={product} />
       </div>
     </div>
   );
