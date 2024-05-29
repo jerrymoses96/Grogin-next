@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import { SortProvider } from "./context/SortContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={inter.className}>
-        {/* <Header /> */}
-        {children}
-        {/* <Footer /> */}
+        <SortProvider>
+          {/* <Header /> */}
+          {children}
+          {/* <Footer /> */}
+        </SortProvider>
       </body>
     </html>
   );

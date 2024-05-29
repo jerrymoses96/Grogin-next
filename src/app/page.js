@@ -10,6 +10,8 @@ export const metadata = {
 
 export default function Home() {
   return<>
+  
+  
     <Header />
     <div className="wrapper">
       <MainPage />
