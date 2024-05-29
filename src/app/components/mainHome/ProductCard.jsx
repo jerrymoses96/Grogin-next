@@ -16,7 +16,7 @@ const ProductCard = ({ item }) => {
   } = item;
 
   return (
-    <Link href={`/products/${product_id}`}>
+    <Link href={`/main/products/${product_id}`}>
       <div className="p-3 h-full border border-[#E5E7EB] xl:border-b xl:border-[#E5E7EB] xl:w-1/3 sm:w-1/2 mobileM:w-full">
         <div className="flex items-center justify-between">
           <button className="mt-1 text-white py-1 bg-red-700 uppercase text-xs font-semibold rounded-l-full rounded-r-full z-[1] min-w-[38px]">

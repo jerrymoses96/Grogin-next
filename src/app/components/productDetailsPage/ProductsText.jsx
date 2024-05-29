@@ -47,7 +47,7 @@ const ProductsText = ({ product }) => {
       <button className="bg-green-600 text-white text-sm font-medium px-4 py-2 rounded-md">
         Order on Whatsapp
       </button>
-      <div className="bg-orange-100 rounded-md flex items-center gap-4 p-4 mt-3 border border-orange-200">
+      <div className="bg-orange-100 rounded-md flex items-center gap-4 p-3 mt-3 border border-orange-200">
         <p className="text-orange-700 font-bold text-sm">Special offer:</p>
         <div className="flex items-center gap-2">
           <small className="text-orange-700 border bg-orange-300 border-orange-300 rounded-md p-1 font-bold text-sm">

@@ -8,7 +8,7 @@ const ProductDetails = ({ id }) => {
 
   return (
     <div className="wrapper">
-      <div className="flex items-center gap-3 mb-5">
+      <div className="flex items-center gap-3 my-5 ">
         <div className="flex items-center ">
           <p className="text-xs text-[#9CA3AF]">Home</p>
           <GoChevronRight className="text-[#9CA3AF]" size={12} />
