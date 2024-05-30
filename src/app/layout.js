@@ -3,6 +3,9 @@ import "./globals.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import { SortProvider } from "./context/SortContext";
+import { PriceRangeProvider } from "./context/PriceRangeContext";
+import { CategoryProvider } from "./context/CategoryContext";
+import { ColorProvider } from "./context/ColorContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +20,17 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={inter.className}>
-        <SortProvider>
-          {/* <Header /> */}
-          {children}
-          {/* <Footer /> */}
-        </SortProvider>
+        <PriceRangeProvider>
+          <SortProvider>
+            <CategoryProvider>
+              <ColorProvider>
+                {/* <Header /> */}
+                {children}
+                {/* <Footer /> */}
+              </ColorProvider>
+            </CategoryProvider>
+          </SortProvider>
+        </PriceRangeProvider>
       </body>
     </html>
   );

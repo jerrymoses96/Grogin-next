@@ -1,23 +1,23 @@
 // components/CategoryFilter.js
 "use client";
-import { useState } from 'react';
+import { useCategoryContext } from "@/app/context/CategoryContext";
 
 const categories = [
-  'Fruits & Vegetables',
-  'Baby & Pregnancy',
-  'Beverages',
-  'Meats & Seafood',
-  'Biscuits & Snacks',
-  'Breads & Bakery',
-  'Breakfast & Dairy',
-  'Frozen Foods',
-  'Grocery & Staples',
-  'Healthcare',
-  'Household Needs',
+  "fruits",
+  "baby",
+  "beverages",
+  "meats",
+  "biscuits",
+  "breads",
+  "breakfast",
+  "frozen",
+  "grocery",
+  "healthcare",
+  "household",
 ];
 
 export default function CategoryFilter() {
-  const [selectedCategory, setSelectedCategory] = useState('Fruits & Vegetables');
+  const { selectedCategory, setSelectedCategory } = useCategoryContext();
 
   return (
     <div className="py-4 border-t border-[#E5E7EB]">
@@ -32,7 +32,9 @@ export default function CategoryFilter() {
                 onChange={() => setSelectedCategory(category)}
                 className="form-checkbox h-4 w-4 text-purple-600 transition duration-150 ease-in-out"
               />
-              <span className="ml-2 text-sm font-medium">{category}</span>
+              <span className="ml-2 text-sm font-medium capitalize">
+                {category}
+              </span>
             </label>
           </li>
         ))}

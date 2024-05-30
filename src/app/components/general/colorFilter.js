@@ -1,6 +1,6 @@
 // components/ColorFilter.js
 "use client";
-import { useState } from "react";
+import { useColorContext } from "@/app/context/ColorContext";
 
 const colors = [
   { name: "Red", value: "bg-red-500" },
@@ -10,12 +10,11 @@ const colors = [
   { name: "Purple", value: "bg-purple-500" },
   { name: "Orange", value: "bg-orange-500" },
   { name: "Pink", value: "bg-pink-500" },
-  { name: "Brown", value: "bg-brown-500" },
-  { name: "Gray", value: "bg-gray-500" },
+ 
 ];
 
 export default function ColorFilter() {
-  const [selectedColor, setSelectedColor] = useState(null);
+  const { selectedColor, setSelectedColor } = useColorContext();
 
   return (
     <div className="py-4 border-t border-[#E5E7EB] ">
@@ -27,7 +26,7 @@ export default function ColorFilter() {
               <input
                 type="checkbox"
                 checked={selectedColor === color.value}
-                onChange={() => setSelectedColor(color.value)}
+                onChange={() => setSelectedColor(color.name)}
                 className="form-checkbox h-4 w-4 text-purple-600 transition duration-150 ease-in-out"
               />
               <span className="ml-2 flex items-center text-sm">

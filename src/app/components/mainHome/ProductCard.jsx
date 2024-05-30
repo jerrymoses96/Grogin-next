@@ -64,7 +64,7 @@ const ProductCard = ({ item }) => {
         </div>
 
         <div className="flex items-center gap-1 pb-2">
-          <p className="text-[#DC2626] text-xl font-bold">${discount}</p>
+          <p className="text-[#DC2626] text-xl font-bold">${original_price}</p>
           <p className="text-[#111827] text-sm font-normal line-through">
             ${original_price}
           </p>

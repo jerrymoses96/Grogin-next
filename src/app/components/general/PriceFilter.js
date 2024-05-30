@@ -1,17 +1,26 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Range, getTrackBackground } from "react-range";
+import { usePriceRangeContext } from "../../context/PriceRangeContext";
 
 const MIN = 0;
 const MAX = 50;
 
 const PriceFilter = () => {
-  const [values, setValues] = useState([MIN, MAX]);
+  const { priceRange, setPriceRange } = usePriceRangeContext();
+  const [values, setValues] = useState(priceRange);
+
+  useEffect(() => {
+    setValues(priceRange);
+  }, [priceRange]);
+
+  const handleFilterClick = () => {
+    setPriceRange(values);
+  };
 
   return (
     <div className="max-w-sm mx-auto py-4">
       <h2 className="text-sm font-semibold mb-4">Widget price filter</h2>
-
       <div className="flex justify-between items-center mb-4">
         <div className="flex flex-col">
           <span className="text-xs text-[#6B7280]">Min Price</span>
@@ -22,7 +31,6 @@ const PriceFilter = () => {
             className="border border-gray-300 rounded p-2 w-32"
           />
         </div>
-
         <span className="mx-2">-</span>
         <div className="flex flex-col">
           <span className="text-xs text-[#6B7280]">Max Price</span>
@@ -34,7 +42,6 @@ const PriceFilter = () => {
           />
         </div>
       </div>
-
       <div className="mb-4">
         <Range
           values={values}
@@ -69,12 +76,15 @@ const PriceFilter = () => {
         />
       </div>
       <div className="flex items-center justify-between">
-        <div className="flex justify-between items-center ">
+        <div className="flex justify-between items-center">
           <span className="text-gray-700 text-sm">
             Price: ${values[0]} - ${values[1]}
           </span>
         </div>
-        <button className="bg-[#E5E7EB] text-black font-bold px-3 py-2 rounded">
+        <button
+          onClick={handleFilterClick}
+          className="bg-[#E5E7EB] text-black font-bold px-3 py-2 rounded"
+        >
           Filter
         </button>
       </div>
