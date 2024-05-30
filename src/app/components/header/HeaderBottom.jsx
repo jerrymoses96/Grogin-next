@@ -5,8 +5,10 @@ import { IoCartOutline } from "react-icons/io5";
 
 const HeaderBottom = () => {
   return (
-    <div className="wrapper flex items-center py-4 justify-between border-b border-[#E5E7EB
-    ]">
+    <div
+      className="wrapper flex items-center py-4 justify-between border-b border-[#E5E7EB
+    ]"
+    >
       <Link href={"/"} className="mr-5">
         <Image src={"/image/Logo.png"} alt="grogin" width={150} height={40} />
       </Link>
@@ -40,7 +42,9 @@ const HeaderBottom = () => {
       <div className="flex items-center gap-3 ml-3">
         <div className="flex flex-col items-center gap-1">
           <FaRegUser size={22} />
-          <p className="text-xs"> joseph</p>
+          <button>
+            <p className="text-xs"> joseph</p>
+          </button>
         </div>
         <div className="flex flex-col items-center gap-1 relative">
           <FaRegHeart size={22} />
