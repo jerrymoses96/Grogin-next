@@ -1,14 +1,13 @@
 "use client";
-// components/ProductStatusFilter.js
-import { useState } from 'react';
+import { useProductStatusContext } from "../../context/ProductStatusContext";
 
 const statuses = [
-  { name: 'In Stock', value: 'inStock' },
-  { name: 'On Sale', value: 'onSale' },
+  { name: "In Stock", value: "in_stock" },
+  // Add more status options as needed
 ];
 
 export default function ProductStatusFilter() {
-  const [selectedStatus, setSelectedStatus] = useState([]);
+  const { selectedStatus, setSelectedStatus } = useProductStatusContext();
 
   const handleStatusChange = (status) => {
     setSelectedStatus((prevSelectedStatus) =>
@@ -20,7 +19,7 @@ export default function ProductStatusFilter() {
 
   return (
     <div className="py-4 border-t border-[#E5E7EB] mr-4">
-      <h3 className="mb-4 text-sm font-semibold">Product Status </h3>
+      <h3 className="mb-4 text-sm font-semibold">Product Status</h3>
       <ul className="space-y-2">
         {statuses.map((status) => (
           <li key={status.value}>

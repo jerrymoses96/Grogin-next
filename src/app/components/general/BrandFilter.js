@@ -4,9 +4,9 @@ import { useState } from 'react';
 
 const brands = [
   { name: 'Nike', id: 'nike' },
-  { name: 'Adidas', id: 'adidas' },
-  { name: 'Puma', id: 'puma' },
-  { name: 'Reebok', id: 'reebok' },
+  // { name: 'Adidas', id: 'adidas' },
+  // { name: 'Puma', id: 'puma' },
+  // { name: 'Reebok', id: 'reebok' },
   // Add more brands as needed
 ];
 

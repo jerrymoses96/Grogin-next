@@ -7,6 +7,7 @@ import { useSortContext } from "@/app/context/SortContext";
 import { usePriceRangeContext } from "@/app/context/PriceRangeContext";
 import { useCategoryContext } from "@/app/context/CategoryContext";
 import { useColorContext } from "@/app/context/ColorContext";
+import { useProductStatusContext } from "@/app/context/ProductStatusContext";
 
 const ProductsDisplay = () => {
   const { selectedSortOption } = useSortContext();
@@ -14,17 +15,19 @@ const ProductsDisplay = () => {
   const { selectedCategory } = useCategoryContext();
   const { selectedColor } = useColorContext();
   const [filteredProducts, setFilteredProducts] = useState([]);
-
+  const {selectedStatus} = useProductStatusContext();
+console.log(selectedStatus);
   useEffect(() => {
     filterAndSortProducts(
       selectedSortOption,
       priceRange,
       selectedCategory,
-      selectedColor
+      selectedColor,
+      selectedStatus
     );
-  }, [selectedSortOption, priceRange, selectedCategory, selectedColor]);
+  }, [selectedSortOption, priceRange, selectedCategory, selectedColor,selectedStatus]);
 
-  const filterAndSortProducts = (sortOption, priceRange, category, color) => {
+  const filterAndSortProducts = (sortOption, priceRange, category, color,status) => {
     let filteredData = data;
 
     if (category) {
@@ -46,6 +49,12 @@ const ProductsDisplay = () => {
       filteredData = filteredData.filter(
         (product) =>
           product.color && product.color.toLowerCase() === color.toLowerCase()
+      );
+    }
+
+    if (status && status.includes('in_stock')) {
+      filteredData = filteredData.filter(
+        (product) => product.in_stock // Filter products that are in stock
       );
     }
 
@@ -73,7 +82,7 @@ const ProductsDisplay = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-5 ">
+      <div className="grid grid-cols-5 mt-4 ">
         {filteredProducts.map((item, index) => (
           <ProductCard key={index} item={item} />
         ))}

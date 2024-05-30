@@ -6,6 +6,7 @@ import { SortProvider } from "./context/SortContext";
 import { PriceRangeProvider } from "./context/PriceRangeContext";
 import { CategoryProvider } from "./context/CategoryContext";
 import { ColorProvider } from "./context/ColorContext";
+import { ProductStatusProvider } from "./context/ProductStatusContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,9 +25,11 @@ export default function RootLayout({ children }) {
           <SortProvider>
             <CategoryProvider>
               <ColorProvider>
-                {/* <Header /> */}
-                {children}
-                {/* <Footer /> */}
+                <ProductStatusProvider>
+                  {/* <Header /> */}
+                  {children}
+                  {/* <Footer /> */}
+                </ProductStatusProvider>
               </ColorProvider>
             </CategoryProvider>
           </SortProvider>
