@@ -5,12 +5,14 @@ import Image from 'next/image';
 import Cookies from 'js-cookie';
 import HeaderTop from './header/HeaderTop';
 import { calculateTimeLeft } from './general/calculateTimeLeft';
+import { useRouter } from 'next/navigation';
 
 const Login = () => {
   const [initialTimeLeft, setInitialTimeLeft] = useState(0);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
     // Calculate the initial time left on the client side
@@ -32,6 +34,7 @@ const Login = () => {
         Cookies.set('token', response.data.token, { expires: 7 }); // Expires in 7 days
         // Redirect or update UI as needed
         console.log('Login successful');
+        router.push('/');
       }
     } catch (err) {
       setError('Login failed. Please check your credentials and try again.');
