@@ -18,7 +18,7 @@ const HeaderTop = ({ initialTimeLeft }) => {
 
   return (
     <div className="bg-[#634C9F]">
-      <div className="bg-[#634C9F] text-white text-xs flex justify-center items-center h-10 gap-[80px]">
+      <div className="bg-[#634C9F] text-white text-xs flex justify-center md:flex-col md:gap-3 mobileL:hidden md:h-20 items-center h-10 gap-[80px]">
         <p>
           FREE delivery & 40% Discount for next 3 orders! Place your 1st order
           now.

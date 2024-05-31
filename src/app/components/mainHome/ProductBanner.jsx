@@ -5,7 +5,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 const ProductBanner = () => {
   return (
-    <div className="relative">
+    <div className="relative tablet:w-full">
       <Image
         src={"/image/banner.jpg.png"}
         alt="grogin"
@@ -19,8 +19,8 @@ const ProductBanner = () => {
         </div>
         <h2 className="  text-3xl font-bold">Grocery store with different</h2>
         <h2 className=" mb-3 text-3xl font-bold">treasures</h2>
-        <p className=" mb-5 text-xs">We have prepared special discounts for you on grocery products...</p>
-        <button className="bg-[#FFFFFF] text-black text-sm font-semibold px-4 py-2 rounded-full flex items-center gap-1">Shop Now <BsArrowRightShort /></button>
+        <p className=" mb-5 text-xs tablet:hidden">We have prepared special discounts for you on grocery products...</p>
+        <button className="bg-[#FFFFFF] text-black text-sm font-semibold px-4 py-2 rounded-full flex items-center gap-1 sm:hidden">Shop Now <BsArrowRightShort /></button>
       </div>
     </div>
   );

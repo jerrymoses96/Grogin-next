@@ -9,14 +9,13 @@ const SortSection = () => {
   const handleSortChange = (event) => {
     const selectedOption = event.target.value;
     setSelectedSortOption(selectedOption);
-    
   };
 
   return (
     <div className="flex rounded-md justify-between items-center mt-2 p-3 bg-[#F3F4F6]">
-      <p className="text-xs text-[#6B7280]">Showing all 16 results</p>
-      <div className="flex items-center">
-        <div className="flex items-center">
+      <p className="text-xs text-[#6B7280] md:hidden">Showing all 16 results</p>
+      <div className="flex items-center md:justify-between">
+        <div className="flex items-center ">
           <p className="text-xs text-[#9CA3AF] font-medium">Sort :</p>
           <select
             className="font-semibold bg-[#F3F4F6] text- text-xs border-none custom-dropdown"
@@ -29,11 +28,11 @@ const SortSection = () => {
             <option value="latest">Latest</option>
           </select>
         </div>
-        <div className="flex border-l px-3 border-[#D1D5DB] items-center gap-2">
+        <div className="flex border-l px-3 border-[#D1D5DB] items-center gap-2 sm:hidden">
           <p className="text-xs text-[#9CA3AF] font-medium">Show :</p>
           <p className="text-xs font-semibold">20 Items</p>
         </div>
-        <div>
+        <div className="sm:hidden">
           <Image
             src={"/image/div.product-views-buttons.png"}
             alt="VIEW"

@@ -3,7 +3,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const HeaderMid = () => {
   return (
-    <div className="wrapper flex justify-between  border-b border-[#E5E7EB
+    <div className="wrapper flex justify-between md:hidden  border-b border-[#E5E7EB
     ]">
       <div
         className="flex text-sm gap-4 py-3 border-b border-[#E5E7EB

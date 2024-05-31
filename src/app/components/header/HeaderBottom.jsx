@@ -9,7 +9,6 @@ import Cookies from "js-cookie";
 const HeaderBottom = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-
   useEffect(() => {
     // Check if the user is authenticated by looking for a token in the cookies
     const token = Cookies.get("token");
@@ -27,25 +26,25 @@ const HeaderBottom = () => {
     window.location.href = "/login";
   };
   return (
-    <div className="wrapper flex items-center py-4 justify-between border-b border-[#E5E7EB]">
-      <Link href="/" className="mr-5">
+    <div className="wrapper flex items-center py-4 justify-between border-b border-[#E5E7EB] mobileM:hidden">
+      <Link href="/" className="mr-5 ">
         <Image src="/image/Logo.png" alt="grogin" width={150} height={40} />
       </Link>
       <Image
-        className=""
+        className="md:hidden"
         src="/image/lINK.png"
         alt="grogin"
         width={20}
         height={20}
       />
-      <div className="mr-4">
+      <div className="mr-4 md:hidden">
         <p className="text-xs font-light text-[#030712]">Deliver to</p>
         <p className="text-xs font-semibold">all</p>
       </div>
       <input
+        className="w-full sm:hidden md:w-80 lg:w-96 xl:w-[500px]"
         type="search"
         style={{
-          width: "60%",
           padding: "12px",
           borderRadius: "4px",
           fontSize: "12px",

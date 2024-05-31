@@ -6,7 +6,7 @@ import ProductsDisplay from "./ProductsDisplay";
 
 const ProductSection = () => {
   return (
-    <div className="py-4 w-[72%]">
+    <div className="py-4 w-[72%] tablet:w-[100%]">
       <FiltersAdded />
       <ProductBanner />
       <SortSection/>

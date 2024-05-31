@@ -82,7 +82,7 @@ console.log(selectedStatus);
 
   return (
     <div>
-      <div className="grid grid-cols-5 mt-4 ">
+      <div className="grid grid-cols-5 mt-4 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 tablet:grid-cols-1">
         {filteredProducts.map((item, index) => (
           <ProductCard key={index} item={item} />
         ))}

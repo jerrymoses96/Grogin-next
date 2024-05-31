@@ -1,9 +1,9 @@
 // components/BrandFilter.js
 "use client";
-import { useState } from 'react';
+import { useState } from "react";
 
 const brands = [
-  { name: 'Nike', id: 'nike' },
+  { name: "Organic farms", id: "Organic farmse" },
   // { name: 'Adidas', id: 'adidas' },
   // { name: 'Puma', id: 'puma' },
   // { name: 'Reebok', id: 'reebok' },
