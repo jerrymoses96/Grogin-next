@@ -42,7 +42,7 @@ const HeaderBottom = () => {
         <p className="text-xs font-semibold">all</p>
       </div>
       <input
-        className="w-full sm:hidden md:w-80 lg:w-96 xl:w-[500px]"
+        className="w-[60%] sm:hidden md:w-80 lg:w-96 xl:w-[500px]"
         type="search"
         style={{
           padding: "12px",
