@@ -3,7 +3,7 @@ import React from "react";
 
 const ProductImage = ({ product }) => {
   return (
-    <div className="w-[50%]">
+    <div className="w-[50%] md:w-full">
       <div>
         <button className="mt-1 mb-1 text-white py-1 bg-red-700 uppercase text-xs font-semibold rounded-l-full rounded-r-full z-[1] min-w-[38px]">
           {product.discount}%

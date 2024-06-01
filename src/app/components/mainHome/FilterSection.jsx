@@ -14,7 +14,7 @@ const FilterSection = () => {
   return (
     <div className="tablet:relative ">
      <button
-        className="hidden tablet:absolute tablet:top-3 tablet:left-0 z-50 text-xl font-bold rounded tablet:block"
+        className="hidden tablet:absolute tablet:top-3 tablet:left-0 z-40 text-xl font-bold rounded tablet:block"
         onClick={toggleFilterVisibility}
       >
         {isFilterVisible ? "✖" : "☰"}
@@ -23,7 +23,7 @@ const FilterSection = () => {
       <div
         className={`tablet:absolute ${
           isFilterVisible ? "tablet:block" : "tablet:hidden"
-        } tablet:top-0 tablet:left-0 tablet:z-40 tablet:bg-white tablet:p-5 tablet:shadow-2xl tablet:rounded-md`}
+        } tablet:top-0 tablet:left-0 tablet:z-30 tablet:bg-white tablet:p-5 tablet:shadow-2xl tablet:rounded-md`}
       >
         <PriceFilter />
         <CategoryFilter />

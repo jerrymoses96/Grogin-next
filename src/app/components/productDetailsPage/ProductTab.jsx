@@ -43,7 +43,7 @@ const ProductTab = ({ product }) => {
               <div key={tab.id}>
                 {Array.isArray(tab.content) ? (
                   tab.content.map((review, index) => (
-                    <div key={index} className="mb-4 flex items-center gap-3">
+                    <div key={index} className="mb-4 mobileM:text-xs flex items-center gap-3">
                       <FaRegUserCircle size={35} />
 
                       <div>
@@ -53,7 +53,7 @@ const ProductTab = ({ product }) => {
                     </div>
                   ))
                 ) : (
-                  <p  >{tab.content}</p>
+                  <p className="mobileM:text-sm"  >{tab.content}</p>
                 )}
               </div>
             )

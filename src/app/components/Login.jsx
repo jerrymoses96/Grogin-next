@@ -44,18 +44,18 @@ const Login = () => {
   return (
     <div>
       <HeaderTop initialTimeLeft={initialTimeLeft} />
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between md:justify-center md:p-10">
         <div className="w-[50%] flex flex-col items-center ">
           <div className="w-[70%] flex flex-col gap-3 items-center ">
             <div className="text-center mb-5">
               <p className="text-4xl font-medium mb-3">WELCOME BACK</p>
-              <p className="text-lg font-light">
+              <p className="text-lg font-light md:text-sm">
                 Welcome back! Please enter your details.
               </p>
             </div>
             <form onSubmit={handleLogin} className="flex flex-col w-[100%]">
               <div className="flex flex-col w-[100%]">
-                <label className="font-semibold" htmlFor="email">
+                <label className="font-medium" htmlFor="email">
                   Email
                 </label>
                 <input
@@ -64,11 +64,11 @@ const Login = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
-                  className="border border-[#000000] p-3 mt-3 rounded-lg shadow-md"
+                  className="border border-[#000000] p-3 mt-1 rounded-lg shadow-md"
                 />
               </div>
-              <div className="flex flex-col w-[100%]">
-                <label className="font-semibold" htmlFor="password">
+              <div className="flex flex-col w-[100%] mt-4">
+                <label className="font-medium" htmlFor="password">
                   Password
                 </label>
                 <input
@@ -77,14 +77,14 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
-                  className="border border-[#000000] p-3 mt-3 rounded-lg drop-shadow-md"
+                  className="border border-[#000000] p-3 mt-1 rounded-lg drop-shadow-md"
                 />
               </div>
-              <p className="font-semibold self-end">forgot password?</p>
+              <p className="font-medium self-end mt-1">forgot password?</p>
               {error && <p className="text-red-500">{error}</p>}
               <button
                 type="submit"
-                className="bg-[#634C9F] w-full text-white font-semibold p-3 rounded-lg"
+                className="bg-[#634C9F] w-full text-white font-semibold p-3 rounded-lg mt-4"
               >
                 Sign in
               </button>
@@ -103,7 +103,7 @@ const Login = () => {
             </p>
           </div>
         </div>
-        <div className="w-[50%]">
+        <div className="w-[50%] md:hidden">
           <Image
             src="/image/login.png"
             alt="Login Image"

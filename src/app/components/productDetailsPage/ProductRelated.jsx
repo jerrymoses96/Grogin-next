@@ -37,7 +37,9 @@ const ProductRelated = ({ product }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-6 ">
+      <div
+        className="grid grid-cols-6 md:grid-cols-4 sm:grid-cols-3 tablet:grid-cols-2 mobileS:grid-cols-1"
+      >
         {visibleProducts.map((item) => (
           <ProductCard key={item.id} item={item} />
         ))}

@@ -23,7 +23,7 @@ const ProductsText = ({ product }) => {
   }, []);
 
   return (
-    <div className="w-1/2">
+    <div className="w-1/2 md:w-full">
       <h2 className="text-4xl font-bold">{product.product_name}</h2>
       <div className="flex items-center gap-1 mb-2 border-b py-5 border-gray-300">
         {renderStars(product.rating)}
@@ -66,7 +66,7 @@ const ProductsText = ({ product }) => {
         </div>
         <p className="text-gray-600 text-xs">Remains until the end of the offer.</p>
       </div>
-      <div className="flex items-center gap-2 py-3">
+      <div className="flex items-center gap-2 py-3 mobileM:flex-col mobileM:items-start">
         <div className="flex items-center rounded-md gap-5 px-3 py-2 border border-gray-300">
           <span>-</span>
           <span>1</span>

@@ -7,7 +7,7 @@ import ProductRelated from "./ProductRelated";
 const ProductsDescription = ({ product }) => {
   return (
     <div>
-      <div className="flex gap-16 items-center my-10 ">
+      <div className="flex gap-16 md:flex-col items-center my-10 ">
         {/* image section  */}
         <ProductImage product={product} />
         {/* description section  */}
