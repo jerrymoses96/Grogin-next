@@ -67,11 +67,14 @@ const Headerdown = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className=" absolute top-0 left-0 w-full h-full bg-white z-50 p-4">
+        <div className=" absolute  top-0 left-0 w-full h-full bg-white z-50 p-4">
           <div className="flex justify-end">
             <button onClick={handleMenuToggle} className="text-3xl">
               <AiOutlineClose />
             </button>
+          </div>
+          <div>
+            
           </div>
           <div className="flex flex-col gap-4 mt-4">
             {menuItems.map((item) => (
@@ -84,7 +87,7 @@ const Headerdown = () => {
               </div>
             ))}
           </div>
-          <div className="flex flex-col gap-4 mt-4">
+          <div className="flex flex-col  gap-4 mt-4">
             {rightMenuItems.map((item) => (
               <div
                 key={item.name}
